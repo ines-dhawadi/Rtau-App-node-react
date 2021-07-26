@@ -1,5 +1,12 @@
 const express = require ('express');
 const app = express()
+const cors = require('cors')
+const body = require ('body-parser')
+
+//appel cors + body-parser
+app.use(cors());
+app.use(express.json());
+
 
 
 //  importation db=> config

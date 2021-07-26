@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const db_connection = ()=>{
-mongoose.connect('mongodb+srv://ines:mongo_db21@cluster0.na9b0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',  
+mongoose.connect('mongodb+srv://ines:RestauAppNode21@cluster0.8eyzr.mongodb.net/restau?retryWrites=true&w=majority',  
 {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -9,7 +9,11 @@ mongoose.connect('mongodb+srv://ines:mongo_db21@cluster0.na9b0.mongodb.net/myFir
     useFindAndModify: true,
   }
   )
-.then(()=> {console.log('db_connected')})
-.catch(()=>{console.log('error')})
+  .then(()=> {
+    console.log('db_connected');
+  })
+  .catch(()=>{
+    console.log('error db_no_connected');
+  })
 }
 module.exports = db_connection
