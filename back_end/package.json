@@ -5,5 +5,15 @@
     "express": "^4.17.1",
     "mongoose": "^5.13.3",
     "nodemon": "^2.0.12"
-  }
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "back_end",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

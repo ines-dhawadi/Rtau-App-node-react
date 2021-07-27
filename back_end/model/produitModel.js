@@ -2,19 +2,24 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 
-const prosuitSchema = new Schema({
+const produitSchema = new Schema({
     titre:{
-     type: String
-    
+     type: String,
+     required : true
  },
  image:{
-    type: String
-    
+    type: String,
+    required : true
 },
 desc:{
-    type: String
-
+    type: String,
+    required : true
+},
+prix:{
+    type: Intl,
+    required : true
 }
+
 })
 
-module.exports= produit = mongoose.model('produit', prosuitSchema)
+module.exports= produit = mongoose.model('produit', produitSchema)
