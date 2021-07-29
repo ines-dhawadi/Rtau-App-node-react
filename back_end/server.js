@@ -23,9 +23,9 @@ const commandeRoute = require('./routes/commandeRoute')
 
 
 // use router 
-app.use('/app/produit',produitRouter)
-app.use('/app/user',userRoute)
-app.use('/app/commande',commandeRoute)
+app.use('/app',produitRouter)
+app.use('/app',userRoute)
+app.use('/app',commandeRoute)
 
 
 
@@ -34,7 +34,7 @@ app.use('/app/commande',commandeRoute)
 
 // CONFIGIRATION DE SERVER (CONNEXION DE SERVER)
 
-const PORT = process.env.PORT || '4000'
+const PORT = process.env.PORT || '5000'
 
 
 

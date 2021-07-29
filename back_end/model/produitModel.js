@@ -16,7 +16,7 @@ desc:{
     required : true
 },
 prix:{
-    type: Intl,
+    type: String,
     required : true
 }
 
