@@ -13,23 +13,24 @@ module.exports={
  }
     },
     addPoduit: async(req,res)=>{
-       const titre = req.body.titre
-       const image = req.body.image
-       const desc = req.body.desc
-       const prix = req.body.prix
+       const titre = req.body.titre,
+        image = req.body.image,
+        desc = req.body.desc,
+        prix = req.body.prix
        
        try{
         const poduit = new produitModel({
             titre, 
-            image,
             desc, 
-            prix
+            prix,
+            image
         })
         await poduit.save()
         res.json(poduit)
 
     }catch(error){
         console.log(error.message);
+        
     }
 
 },

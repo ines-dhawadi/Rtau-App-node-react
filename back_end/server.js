@@ -1,17 +1,20 @@
-const express = require ('express');
+const express = require ('express')
 const app = express()
 const cors = require('cors')
-const body = require ('body-parser')
 
-//appel cors + body-parser
-app.use(cors());
-app.use(express.json());
 
 
 
 //  importation db=> config
 const db= require ('./config/db')
 db();
+//appel cors + body-parser
+app.use(cors())
+
+app.use(express.json());
+
+
+
 
 
 
@@ -34,11 +37,17 @@ app.use('/app',commandeRoute)
 
 // CONFIGIRATION DE SERVER (CONNEXION DE SERVER)
 
-const PORT = process.env.PORT || '5000'
+const PORT = process.env.REACT_APP_PORT || '5001'
 
 
 
 
-app.listen(PORT,()=>{
-    console.log(`server is runing ${PORT}`)
-})
+//config server
+app.listen(PORT ,(err)=>{
+    if (err){
+        console.log('server is not running ')
+    }
+    else {
+        console.log(`server is running on port ${PORT}`)
+    }
+    })
